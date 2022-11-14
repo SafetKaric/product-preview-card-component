@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.285rem;
+    font-weight: 700;
+    font-family: "Fraunces";
+    padding-top: 0.5rem;
+}
+
+span {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: var(--dark-grayish-blue);
+    font-size: 1rem;
+}
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    font-size: 0.875rem;
+}
+
+body {
+    background: var(--cream);
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card-component {
+    max-width: 355px;
+    background: var(--white);
+    border-radius: .75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-component .image img {
+    border-top-right-radius: .75rem;
+    border-top-left-radius: .75rem;
+}
+
+.card-component .description {
+    padding: 1.4rem 1.75rem
+}
+
+.card-component .description p {
+    color: var(--dark-grayish-blue);
+    padding: 1rem 0;
+    letter-spacing: 0.02rem;
+}
+
+.card-component .description button {
+    width: 100%;
+    padding: 1rem 0;
+    outline: none;
+    border: none;
+    background-color: var(--dark-cyan);
+    border-radius: 0.55rem;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.card-component .description button img {
+    width: 1rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price p:first-child {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-cyan);
+    font-family: "Fraunces";
+}
+
+.price p:last-child {
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1024px) {
+    .card-component {
+        display: flex;
+        flex-direction: row;
+        max-width: 535px;
+    }
+
+    .card-component .description {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-component .image {
+        flex: 1.1;
+    }
+
+    h1 {
+        line-height: 100%;
+        padding: 1rem 0;
+    }
+
+    .card-component .image img {
+        border-radius: 0;
+        border-top-left-radius: .75rem;
+        border-bottom-left-radius: .75rem;
+        height: 100%;
+    }
+}
